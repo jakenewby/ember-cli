@@ -56,7 +56,7 @@ describe('WatchDetector', function() {
       describe('watchman version is date-based', function() {
         beforeEach(function() {
           childProcess.execSync = function() {
-            return '{"version":"v2021.10.11.00"}';
+            return '{"version":"2021.10.11.00"}';
           };
         });
 
