@@ -55,12 +55,12 @@ describe('WatchDetector', function() {
     describe('input preference.watcher === watchman', function() {
       describe('watchman version is date-based', function() {
         beforeEach(function() {
-          childProcess.execSync = function () {
+          childProcess.execSync = function() {
             return '{"version":"v2021.10.11.00"}';
           };
         });
 
-        it("chooses watchman", function () {
+        it("chooses watchman", function() {
           let option = subject.findBestWatcherOption({
             watcher: "watchman",
           });
@@ -77,13 +77,13 @@ describe('WatchDetector', function() {
       });
 
       describe('watchman version complies with semver', function() {
-        beforeEach(function () {
-          childProcess.execSync = function () {
+        beforeEach(function() {
+          childProcess.execSync = function() {
             return '{"version":"3.0.0"}';
           };
         });
 
-        it("chooses watchman", function () {
+        it("chooses watchman", function() {
           let option = subject.findBestWatcherOption({ watcher: "watchman" });
           expect(option).to.have.property("watcher", "watchman");
           expect(option.watchmanInfo).to.have.property("version");
