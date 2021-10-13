@@ -1,5 +1,5 @@
 {
-  "name": "ember-cli",
+  "name": "@jakenewby/ember-cli",
   "version": "2.15.2",
   "description": "Command line tool for developing ambitious ember.js apps",
   "keywords": [
